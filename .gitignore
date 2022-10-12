@@ -1,23 +1,58 @@
-# Compiled class file
-*.class
+package javaprojects;
 
-# Log file
-*.log
+import java.util.Scanner;
 
-# BlueJ files
-*.ctxt
+class StudentGradeReport 
+{
+	public static void main(String[] args) 
+	{
+		Scanner input = new Scanner(System.in);
+        int studentAmount;
+        System.out.print("Enter the number of students: ");
+        studentAmount = input.nextInt();
+        String[] studentNames = new String[studentAmount];
+        int[] studentIDs = new int[studentAmount];
+        int[] testScores = new int[studentAmount];
+        double[] avg = new double[studentAmount];
+        char[] grade = new char[studentAmount];
+        
+        
+        for (int i = 0; i < studentAmount; i++)
+        {
+            studentNames[i] = getStudentsNames();
+            studentIDs[i] = getStudentID( idArray);
+            testScores[i] = getstudentTestScores();
+            avg[i] = calculateAverageGrade();
+            grade[i] = assignLetterGrade();
+            displayStudentGradeReport();
+            
+        }
+    }
+    /*public static void getStudentsNames(i, name[]);
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the student name: ");
+        return name;
+    } */
+    /*public static int getStudentID(int idArray)
+    {
+        
+    } */
+    /*public static int getstudentTestScores()
+    {
+        
+    } */
+    /*public static double calculateAverageGrade()
+    {
+        
+    } */
+    /*public static char assignLetterGrade(averageGrades,letterGrades,index)
+    {
+        
+    } */
+    /*public static void displayStudentGradeReport()
+    {
+        
+    }*/
+}
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
