@@ -49,8 +49,7 @@ class StudentGradeReport
     } 
     public static void getstudentTestScores(int i,int score1[])
     {
-    	Random random = new Random();
-    	score1[i] = random.nextInt(100)+50;
+    	score1[i] = (int) (50 + (Math.random()*51));
     } 
     public static double calculateAverageGrade(int i,int grade1[],int grade2[],
     		int grade3[],int grade4[],int grade5[])
@@ -77,14 +76,7 @@ class StudentGradeReport
     public static void displayStudentGradeReport(int i, String name[], int studentID[], int score1[], int score2[],
     		int score3[], int score4[], int score5[], double avg[], char grade[])
     {
-        System.out.println("\nName: " + name[i]);
-        System.out.println("Student ID: " + studentID[i]);
-        System.out.println("Test 1: " + score1[i]);
-        System.out.println("Test 2: " + score2[i]);
-        System.out.println("Test 3: " + score3[i]);
-        System.out.println("Test 4: " + score4[i]);
-        System.out.println("Test 5: " + score5[i]);
-        System.out.println("Average: " + avg[i]);
-        System.out.println("Grade: " + grade[i]);
+        System.out.printf("%12s %12s %12s %12s %12s %12s %12s %12s %12s\n","Student name", "Student ID", "Test 1", "Test 2", "Test 3", "Test 4", "Test 5", "Average", "Grade");
+        System.out.printf("%12s %12d %12d %12d %12d %12d %12d %12.2f %12c\n", name[i], studentID[i], score1[i], score2[i], score3[i], score4[i], score5[i], avg[i], grade[i]);
     }
 }
