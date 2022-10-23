@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.util.Random;
+//import java.util.Random;
 
 class StudentGradeReport 
 {
@@ -36,7 +36,7 @@ class StudentGradeReport
             		score3, score4, score5, avg, grade);
         }
     }
-    public static void getStudentsNames(int i,String name[])
+    public static void getStudentsNames(int i, String name[])
     {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter the student name: ");
@@ -44,15 +44,14 @@ class StudentGradeReport
     } 
     public static void getStudentID(int i, int idArray[])
     {
-        Random random = new Random();
-        idArray[i] = random.nextInt(99999999)+00000001;
+        idArray[i] = 10000000 + (int)(Math.random() * 9999999);
     } 
     public static void getstudentTestScores(int i,int score1[])
     {
     	score1[i] = (int) (50 + (Math.random()*51));
     } 
-    public static double calculateAverageGrade(int i,int grade1[],int grade2[],
-    		int grade3[],int grade4[],int grade5[])
+    public static double calculateAverageGrade(int i, int grade1[], int grade2[],
+    		int grade3[], int grade4[], int grade5[])
     {
         double avg;
         avg = (grade1[i] + grade2[i] + grade3[i] + grade4[i] + grade5[i]) / 5;
